@@ -29,8 +29,12 @@ body {
   margin: 0;
 }
 
+/* 
+  Seit width vieta varam izmantot max-wdith: 960px;
+  izmantojot to mums lapa nesaluzis uz mazakiem ekraniem.
+*/
 .container {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
