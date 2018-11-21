@@ -1,34 +1,68 @@
+/*
+  Nonemam body margin lai lapa sakas no ekrana malam.
+*/
+body {
+  margin: 0;
+}
+
+/*
+  margin: 0; saja gadijuma neko nemainija
+  lai nonemtu atstarpi kas ir no ekrana augsas lidz header
+  vajag nonemt margin-top no h1, tas saja gadijuma mums trauce
+*/
 .header {
-    background-color: rgb(66, 65, 65);
-    margin: 0;
+  background-color: rgb(66, 65, 65);
 }
 
-.header p { 
-    color: white;
-    margin-top: 0;
-    padding: 0 0 20px 0;
+.header p {
+  color: white;
+  margin-top: 0;
+  padding: 0 0 20px 0;
 }
 
-.header h1 { color:white;
-    padding: 20px 0 0 0;
-margin-bottom: 0}
+/*
+ Censamies rakstit ta lai smuki noformatets - ta citam bus veigalk lasit :)
+*/
+.header h1 {
+  color: white;
+  padding: 20px 0 0 0;
+  margin: 0;
+}
 
+/* 
+  Seit width vieta varam izmantot max-wdith: 960px;
+  izmantojot to mums lapa nesaluzis uz mazakiem ekraniem.
+*/
 .container {
-    width: 960px;
-    margin: 0 auto;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 img {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.container .articles {
-    display: inline-block;
-    vertical-align: text-top;
-    width: 33%;
-    text-align: justify;
-    padding-top: 10px;
-    padding: 10px;
+/*
+  1. padding-top: 10px; seit nebus nepieciesams jo zemak
+  jau zliec padding: 10px; kas attiecas uz visam cetram pusem
+
+  2. box-sizing: border-box; seit it tiesi laika, tacu es ieteiktu
+  to uzlikt visam lai nav apjukums, ka dazi bloki to izmanto dazi ne
+  pasam velak var sagadat galvas sapes :)
+
+  html {
     box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+*/
+.container .articles {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+  text-align: justify;
+  padding: 10px;
+  box-sizing: border-box;
 }
